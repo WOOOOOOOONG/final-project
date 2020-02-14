@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>외웟</title>
+	<style>
+		/* 틀 생성 */
+		body {
+			width: 1500px;
+			height: 900px;
+			margin: auto;
+		}
+
+		.word-form {
+			width: 100%;
+			height: 200px;
+			background-color: gainsboro;
+		}
+
+		.top5-div {
+			width: 76%;
+			height: 700px;
+			float: left;
+		}
+
+		.advertise {
+			width: 23.7%;
+			height: 200px;
+			float: left;
+		}
+
+		.today-word {
+			width: 23.7%;
+			height: 500px;
+			float: left;
+		}
+
+		/* top5-section */
+		.top-area {
+			text-align: center
+		}
+
+		.top5-div img {
+			width: 130px;
+			height: 130px;
+			margin: 70px 80px 0 0;
+			cursor: pointer;
+			border: 4px solid gainsboro;
+		}
+
+		/* advertise section */
+		.advertise img {
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+
+		/* today-word section */
+		.today-word-title h2 {
+			width: 89%;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-top: 0;
+			padding-left: 40px;
+			background: cornflowerblue;
+			line-height: 60px;
+			vertical-align: middle;
+			color: white;
+		}
+
+		.today-word-words ul {
+			list-style-type: none;
+			text-decoration: none;
+		}
+
+		.eng {
+			color:cornflowerblue;
+		}
+	</style>
+</head>
+<body>
+	<nav class="word-search" id="word-search">
+		<div class="word-form">
+			<form action="wordSearch.do" method="POST">
+				<h2 align="center">영어사전</h2>
+				<div style="text-align:center; margin:0 auto;display: block;">
+					<input type="text" class="word" id="word" style="width: 400px; height: 50px; border: 2px solid orange">
+					<img src="img/돋보기.png" alt="검색" width="50" height="50">
+				</div>
+				<!-- 추가로 나중에 이곳에 검색한 단어 목록 추가 -->
+			</form>
+		</div>
+	</nav>
+
+	<section class="top5-section" id="top5-section">
+		<div class="top5-div">
+			<h1 align="center">단어장 TOP 5</h1>
+				<div class="top-area">
+					<img src="img/돋보기.png" alt="top1" onclick="">
+					<img src="img/돋보기.png" alt="top2" onclick="">
+					<img src="img/돋보기.png" alt="top3" onclick="">
+					<br/>
+					<img src="img/돋보기.png" alt="top4" onclick="">
+					<img src="img/돋보기.png" alt="top5" onclick="">
+				</div>
+		</div>
+	</section>
+
+	<section class="advertise" id="advertise">
+		<img src="img/광고.jpg" alt="advertise" onclick="location.href='http://www.siwonschool.com/?s=event&t=siwonpen&gclid=EAIaIQobChMI46LvoJKr5wIVDKyWCh0OlAA_EAAYASAAEgLvFfD_BwE'">
+	</section>
+
+	<section class="today-word" id="today-word">
+		<div class="today-word-div">
+			<div class="today-word-title">
+				<h2>오늘의 단어</h2>
+			</div>
+			<div class="today-word-words">
+				<ul>
+					<li><p class="eng">vulnerable</p></li>
+					<li><p class="kor">취약한, 연약한, 공격받기 쉬운</p></li>
+					<li><p class="eng">devise</p></li>
+					<li><p class="kor">고안하다, 궁리하다</p></li>
+					<li><p class="eng">discard</p></li>
+					<li><p class="kor">버리다, 폐기하다</p></li>
+					<li><p class="eng">emerge</p></li>
+					<li><p class="kor">나타나다, 드러나다</p></li>
+					<li><p class="eng">participant</p></li>
+					<li><p class="kor">참가자, 입후보자</p></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

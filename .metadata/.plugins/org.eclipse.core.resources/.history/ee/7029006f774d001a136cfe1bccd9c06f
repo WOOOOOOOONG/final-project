@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/left-menubar.css">
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8"
+	src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<style>
+	/* datatables */
+	.table {
+		margin-top: 4vh;
+		margin-left: 4vw;
+		width: 70%;
+		float: left;
+	}
+	
+	#table_id {
+		text-align: center;
+	}
+	
+	#table_id_length, #table_id_info {
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<nav class="menu" id="menu" tabindex="0">
+		<div class="smartphone-menu-trigger"></div>
+		<header class="avatar">
+			<img
+				src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" />
+			<h2>John D.</h2>
+		</header>
+		<ul>
+			<li tabindex="0" class="icon-users icon"><a><span>멤버
+						관리</span></a>
+				<ul class="hide">
+					<li>멤버 전체</li>
+					<li>탈퇴한 멤버</li>
+				</ul></li>
+			<li tabindex="0" class="icon-settings icon"><a><span>문의사항</span></a>
+				<ul class="hide">
+					<li>전체 문의</li>
+				</ul></li>
+		</ul>
+		<script>
+            $(document).ready(function () {
+                $(".icon>a").click(function () {
+                    var submenu = $(this).next("ul");
+                    console.log(submenu.is(":visible"));
+                    if (submenu.is(":visible")) {
+                        submenu.slideUp();
+                    } else {
+                        submenu.slideDown();
+                    }
+                });
+            });
+        </script>
+	</nav>
+</body>
+</html>
